@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import Annotated
-from rich import print as rprint
 
 import typer
+from rich import print as rprint
 
 from utility import ls
 
@@ -22,12 +22,17 @@ def main(
         bool, typer.Option("--no-colors", "-n", help="Disable the colors.")
     ] = False,
 ):
+    """
+    An ls with the X factor
+    """
+
     if not dir.exists():
         if no_colors:
             rprint(f"The directory [bold]{dir}/[/] doesn't exists")
         else:
             rprint(f"[red]The directory[/] {dir}/ [red]doesn't exists[/]")
-        return
+
+        raise typer.Exit()
 
     ls.ls(dir, no_colors)
 
