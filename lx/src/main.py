@@ -32,7 +32,7 @@ def main(
         else:
             rprint(f"[red]The directory[/] {dir}/ [red]doesn't exists[/]")
 
-        raise typer.Exit()
+        raise typer.Exit(1)
 
     ls.ls(dir, no_colors)
 
