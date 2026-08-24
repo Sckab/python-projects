@@ -1,0 +1,24 @@
+[project]
+name = "notes"
+version = "0.1.0"
+description = "Note taker"
+readme = "README.md"
+authors = [{ name = "Sckab", email = "giulianodeamicis2009@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["pyside6>=6.11.2", "typer>=0.27.1"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.isort]
+wrap_length = 10
+multi_line_output = 3
+line_length = 100
+
+[project.scripts]
+notes = "notes.main:app"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
