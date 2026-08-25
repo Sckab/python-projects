@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import Annotated
-from rich import print as Print
 
 import typer
+from rich import print as Print
 from rich import print as rprint
 
 from utility import ls
@@ -36,9 +36,6 @@ def main(
         raise typer.Exit(1)
 
     ls.ls(dir, no_colors)
-
-    Print("[bold]This is bold [red]this is red and bold[/] this is still bold[/]")
-    Print("[bold red]This is bold and red[/] this is normal")
 
 
 if __name__ == "__main__":
