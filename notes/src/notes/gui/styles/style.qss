@@ -7,5 +7,15 @@ QMainWindow {
 }
 
 #header {
-  border-bottom: #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+#header_btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+}
+
+#header_btn:pressed {
+  background-color: #2a2a2a;
 }

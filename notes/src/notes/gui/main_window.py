@@ -3,7 +3,8 @@ import os
 from PySide6.QtCore import QSize
 from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
 
-from notes.gui.custom_widgets.header import Header
+from notes.gui.custom_widgets.Content import Content
+from notes.gui.custom_widgets.Header import Header
 
 
 class MainWindow(QMainWindow):
@@ -14,13 +15,13 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Note Taker")
 
         self.main_layout = QVBoxLayout()
+        self.main_layout.setContentsMargins(0, 0, 0, 0)
 
         self.header = Header()
-
-        self.content = QVBoxLayout()
+        self.content = Content()
 
         self.main_layout.addWidget(self.header)
-        self.main_layout.addLayout(self.content)
+        self.main_layout.addWidget(self.content)
 
         self.central = QWidget()
         self.central.setLayout(self.main_layout)
