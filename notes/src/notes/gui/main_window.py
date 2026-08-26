@@ -1,26 +1,31 @@
 import os
 
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtCore import QSize
+from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
 
-from notes.gui.ui.ui_main_window import Ui_MainWindow
+from notes.gui.custom_widgets.header import Header
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+        self.setFixedSize(QSize(800, 500))
+        self.setWindowTitle("Note Taker")
 
-        self.counter = 0
+        self.main_layout = QVBoxLayout()
 
-        self.ui.label.setText(str(self.counter))
-        self.ui.pushButton.clicked.connect(self.update_counter)
+        self.header = Header()
 
-    def update_counter(self, e):
-        self.counter += 1
+        self.content = QVBoxLayout()
 
-        self.ui.label.setText(str(self.counter))
+        self.main_layout.addWidget(self.header)
+        self.main_layout.addLayout(self.content)
+
+        self.central = QWidget()
+        self.central.setLayout(self.main_layout)
+
+        self.setCentralWidget(self.central)
 
 
 def run() -> int:

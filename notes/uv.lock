@@ -47,12 +47,14 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "pyside6" },
+    { name = "qt-material-icons" },
     { name = "typer" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "pyside6", specifier = ">=6.11.2" },
+    { name = "qt-material-icons", specifier = ">=0.5.0" },
     { name = "typer", specifier = ">=0.27.1" },
 ]
 
@@ -111,6 +113,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/60/4c/d92b08a2151d095b9a3725fa0e71b215ec686d40bbd5d8b702d21a9b5eaa/pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_39_aarch64.whl", hash = "sha256:d3ec6e1885c46e57f16364f38ea8040ffc5dc0b18341058f608fede3ba930567", size = 79575497, upload-time = "2026-08-18T06:36:46.97Z" },
     { url = "https://files.pythonhosted.org/packages/dc/09/d2662684aee4d3f027ff9b1e965f22301bc28ffc5b7f167658508e4475dc/pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl", hash = "sha256:c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1", size = 76913043, upload-time = "2026-08-18T06:36:54.038Z" },
     { url = "https://files.pythonhosted.org/packages/cd/87/4dd2a6468cea600da1fcf9c7f02bc248eeaa98cdc75658e48e669d95326a/pyside6_essentials-6.11.2-cp310-abi3-win_arm64.whl", hash = "sha256:fadd75c5c20800d64dd0a586ea8cb337c5e630aa2246df0e5105738afa46e02c", size = 58125520, upload-time = "2026-08-18T06:36:59.073Z" },
+]
+
+[[package]]
+name = "qt-material-icons"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/9c/a46c5d3ee023f1cc1db86e942d45d06df6a07042f229ef97e75b0a873986/qt_material_icons-0.5.0.tar.gz", hash = "sha256:ea0e73c0f7299d5a01f6df3e2d65032575c2cb11c2334cf26eb370760a72ee45", size = 20646803, upload-time = "2026-03-06T23:41:47.225Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fd/83/afc510c27980bf7aeacd0ff5b93a99df423d06911d5c86f93a547914008c/qt_material_icons-0.5.0-py3-none-any.whl", hash = "sha256:a71786eb211cd42fb640cfda2f6f7140065264d5b0ea97ad2bc63f5a0fc3dd83", size = 21156806, upload-time = "2026-03-06T23:41:44.425Z" },
 ]
 
 [[package]]

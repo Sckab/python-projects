@@ -1,3 +1,11 @@
 QMainWindow {
   background-color: #181616;
 }
+
+#title {
+  color: #76946A;
+}
+
+#header {
+  border-bottom: #2a2a2a;
+}
